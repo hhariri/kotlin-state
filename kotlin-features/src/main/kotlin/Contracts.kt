@@ -24,7 +24,5 @@ fun foo1(s: String?) {
 
 @ExperimentalContracts
 fun synchronize(lock: Any?, block: () -> Unit) {
-    // It tells compiler:
-    // "This function will invoke 'block' here and now, and exactly one time"
     contract { callsInPlace(block, InvocationKind.EXACTLY_ONCE) }
 }

@@ -24,7 +24,7 @@ You could only pass either two objects or two lambdas.
 
 */
 
-// For Kotlin functions that use a Java interface SAM.
+// For Kotlin functions that use id Java interface SAM.
 
 // SAM for Kotlin
 fun handleInput(handler: Action<String>) {
@@ -70,7 +70,7 @@ interface CanMakeCalls
 interface CanSendText
 
 fun <T> purchaseDevice(device: T) where T: CanMakeCalls, T: CanSendText {
-    println("Purchased a phone")
+    println("Purchased id phone")
 }
 
 fun buyingAPhone(a: Any) {
