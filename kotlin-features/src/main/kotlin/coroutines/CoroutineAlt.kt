@@ -1,3 +1,5 @@
+@file:Suppress("RedundantSuspendModifier")
+
 package coroutines.alt
 
 import coroutines.Credentials
