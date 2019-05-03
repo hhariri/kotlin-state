@@ -1,31 +1,5 @@
 import kotlin.experimental.*
 
-/*
-before: Java SAM interface, Kotlin method using this Java SAM interface => you can NOT pass lambda instead
-
-now (new type inference): Java SAM interface, Kotlin method using this Java SAM interface => you can pass lambda instead (edited)
-before, now (new type inference): Kotlin SAM interface, Kotlin method using this Kotlin SAM interface => you can NOT pass lambda instead (
-*/
-
-
-
-
-/*
-class Observable {
-    public final Observable zipWith(
-    ObservableSource other, BiFunction zipper) {…}
-}
-
-observable.zipWith(anotherObservable, BiFunction { x, y -> x + y })
-
-
-before: Java method using two Java SAM interfaces => you can NOT pass one object and one lambda.
-You could only pass either two objects or two lambdas.
-
-*/
-
-// For Kotlin functions that use id Java interface SAM.
-
 // SAM for Kotlin
 fun handleInput(handler: Action<String>) {
 }
@@ -34,8 +8,6 @@ fun main(args: Array<String>) {
     // add -XXLanguage:+NewInference
     handleInput { println(it) }
 }
-
-// Sequences
 
 
 // the compiler can infer the type from yield

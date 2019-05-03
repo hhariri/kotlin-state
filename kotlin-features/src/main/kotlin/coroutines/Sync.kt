@@ -5,7 +5,6 @@ data class UserID(val id: String, val username: String)
 data class Credentials(val username: String, val passwword: String)
 data class UserData(val fullname: String, val email: String)
 
-// simple consecutive logic; blocking version
 fun login(credentials: Credentials): UserID {
     TODO("Do later")
 }

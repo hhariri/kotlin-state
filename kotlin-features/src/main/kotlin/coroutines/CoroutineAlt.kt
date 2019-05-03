@@ -8,7 +8,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import javax.xml.bind.JAXBElement
 
-// simple consecutive logic; blocking version
+
 suspend fun login(credentials: Credentials): UserID {
     TODO("Do later")
 }

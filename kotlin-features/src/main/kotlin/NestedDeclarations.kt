@@ -1,11 +1,13 @@
 
 annotation class Routing() {
-    enum class HttpVerb { GET, PUT, POST, DELETE, PATCH, OPTIONS } // Now possible
-    annotation class Path(val path: String, val secondary: String) // Now possible
+
+    enum class HttpVerb { GET, PUT, POST, DELETE, PATCH, OPTIONS }
+
+    annotation class Path(val path: String, val secondary: String)
+
     annotation class Verb(val method: HttpVerb)
 
-    // Members can now be part of companion objects
-    companion object { // Now possible
+    companion object {
         const val DEFAULT = "/"
     }
 
@@ -14,6 +16,4 @@ annotation class Routing() {
 @Routing
 @Routing.Path(path = "/home", secondary = Routing.DEFAULT)
 @Routing.Verb(method = Routing.HttpVerb.GET)
-class Controller() {
-
-}
+class Controller
