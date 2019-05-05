@@ -17,11 +17,11 @@ fun showData(data: UserData) {
 }
 
 suspend fun showUserInfo(credentials: Credentials) {
-    val userData = withContext(Dispatchers.IO) {
+    withContext(Dispatchers.IO) {
         val userID = login(credentials)
-        loadUserData(userID)
+        val userData = loadUserData(userID)
+        showData(userData)
     }
-    showData(userData)
 }
 
 
