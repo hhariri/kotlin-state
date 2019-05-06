@@ -5,7 +5,7 @@ fun capturingWhenBefore(years: Int) {
     when (response) {
         50 -> println("Too long")
         5 -> println("Bargain")
-        else -> println("Oh bother!")
+        else -> println("Can't handle $response")
     }
 }
 
